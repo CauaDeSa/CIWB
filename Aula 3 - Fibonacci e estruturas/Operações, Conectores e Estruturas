@@ -1,0 +1,34 @@
+// Operadores lógicos
+
+// >   - Maior que
+// <   - Menor que
+// >=  - Maior ou igual a
+// <=  - Menor ou igual a
+// ==  - Igualdade
+// === - Igualdade em valor e tipo do dado
+// !=  - Diferente
+// !== - Diferente em valor e tipo do dado
+
+
+// Conectores lógicos
+
+// &&  - Um e outro ao mesmo tempo
+// ||  - Um ou outro
+
+
+// Estruturas condicionais
+
+// if()
+// ...
+// else
+// ...
+
+// switch()
+// case 'X': break
+// default
+
+
+// Estrutura de Repetição
+
+// for (inciialização; condição de parada; incrementação)
+// while (condição)
