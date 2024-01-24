@@ -150,14 +150,38 @@ async function openList(url) {
         
         firstDiv.appendChild(secondDiv);
 
+        if (response.original_tittle != null) {
+            tituloPagina.textContent = response.original_title;
+        } else {
+            tituloPagina.textContent = response.original_name;
+        }
+
         let movieOverview = document.createElement('p');
-        let vote = document.createElement('p');
+        let vote = document.createElement('p');    
         let date = document.createElement('p');
 
-        tituloPagina.textContent = response.original_title;
-        movieOverview.textContent = 'Visão geral: ' + response.overview;
-        vote.textContent = 'Nota Média: ' + response.vote_average;
-        date.textContent = 'Data de lançamento: ' + response.release_date;
+        movieOverview.innerHTML = '<b> Visão geral: </b>';
+        vote.innerHTML = '<b> Nota Média: </b>';
+        date.innerHTML = '<b> Data de lançamento: </b>';
+
+        if (response.overview != null) {
+            movieOverview.innerHTML += response.overview;
+        } else {
+            movieOverview.innerHTML += 'Não disponível';
+        }
+
+        if (response.vote_average != null) {
+            vote.innerHTML += response.vote_average;
+        } else {
+            vote.innerHTML += 'Não disponível';
+        }
+
+        
+        if (response.release_date != null) {
+            date.innerHTML += response.release_date;
+        } else {
+            date.innerHTML += 'Não disponível';
+        }
 
         secondDiv.appendChild(movieOverview);
         secondDiv.appendChild(vote);
